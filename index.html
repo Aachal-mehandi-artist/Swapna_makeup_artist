@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Studio — Makeup & Nail Artist</title>
+  <meta name="description" content="Professional makeup and nail artist for bridal, party, editorial looks and nail art." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="nav" id="top">
+    <a href="#top" class="brand"><span data-bind="brand">Glow Studio</span></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Portfolio</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book" class="btn btn-small">Book now</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Makeup &amp; Nail Artist · <span data-bind="city">Your City</span></p>
+      <h1>I am a professional<br /><em>makeup &amp; nail artist</em></h1>
+      <p class="lead">Bridal glam, party looks and detailed nail art — designed around you, so you look and feel your best on the days that matter.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn">Book an appointment</a>
+        <a href="#gallery" class="btn btn-ghost">View my work</a>
+      </div>
+      <ul class="hero-stats">
+        <li><strong data-bind="years">8+</strong><span>years experience</span></li>
+        <li><strong data-bind="clients">1,200+</strong><span>happy clients</span></li>
+        <li><strong>100%</strong><span>premium products</span></li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-card art-1"><span>💄</span></div>
+      <div class="art-card art-2"><span>💅</span></div>
+      <div class="art-card art-3"><span>✨</span></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="about-photo"><img src="images/profile.jpg" alt="Portrait of the artist" onerror="this.parentElement.classList.add('no-photo'); this.remove();" /><span>Your photo<br /><small>images/profile.jpg</small></span></div>
+    <div>
+      <p class="eyebrow">About me</p>
+      <h2>Hi, I'm <span data-bind="name">Your Name</span></h2>
+      <p>I'm a certified makeup and nail artist who loves bringing out natural beauty. From soft everyday looks to full bridal glam and hand-painted nail art, every look starts with listening to what you want.</p>
+      <p>I work only with skin-friendly, long-wear products and keep every tool sanitised — for makeup and nails alike.</p>
+      <ul class="checks">
+        <li>Certified in professional makeup &amp; nail technology</li>
+        <li>Home visits and studio appointments</li>
+        <li>Trial sessions available for brides</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <p class="eyebrow center">Services</p>
+    <h2 class="center">What I can do for you</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="makeup" role="tab">💄 Makeup</button>
+      <button class="tab" data-tab="nails" role="tab">💅 Nails</button>
+    </div>
+    <div class="cards" data-panel="makeup">
+      <article class="card"><h3>Bridal Makeup</h3><p>HD / airbrush bridal look, hairstyling-ready, lasts all day. Includes a pre-wedding trial.</p><p class="price">from <span data-price="bridal">₹15,000</span></p></article>
+      <article class="card"><h3>Party &amp; Engagement</h3><p>Glam or soft look for receptions, sangeet, engagements and parties.</p><p class="price">from <span data-price="party">₹4,000</span></p></article>
+      <article class="card"><h3>Editorial &amp; Shoots</h3><p>Camera-ready makeup for photoshoots, fashion, film and content.</p><p class="price">from <span data-price="editorial">₹6,000</span></p></article>
+      <article class="card"><h3>Makeup Lessons</h3><p>One-to-one self-makeup class tailored to your face and your kit.</p><p class="price">from <span data-price="lesson">₹3,000</span></p></article>
+    </div>
+    <div class="cards" data-panel="nails" hidden>
+      <article class="card"><h3>Gel Manicure</h3><p>Long-lasting chip-free gel colour with cuticle care and shaping.</p><p class="price">from <span data-price="gel">₹1,200</span></p></article>
+      <article class="card"><h3>Nail Extensions</h3><p>Acrylic, gel or poly-gel extensions in any shape and length.</p><p class="price">from <span data-price="extensions">₹2,500</span></p></article>
+      <article class="card"><h3>Nail Art</h3><p>Hand-painted designs, ombré, French, chrome, stones and 3D art.</p><p class="price">from <span data-price="art">₹800</span></p></article>
+      <article class="card"><h3>Bridal Nails</h3><p>Nail design matched to your outfit and jewellery for the big day.</p><p class="price">from <span data-price="bridalNails">₹3,500</span></p></article>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <p class="eyebrow center">Portfolio</p>
+    <h2 class="center">Recent work</h2>
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="makeup">Makeup</button>
+      <button class="filter" data-filter="nails">Nails</button>
+    </div>
+    <!-- Put your photos in images/ with these names, or change the src values. -->
+    <div class="gallery">
+      <figure data-cat="makeup"><img src="images/makeup-1.jpg" alt="Bridal makeup" loading="lazy" /><figcaption>Bridal glam</figcaption></figure>
+      <figure data-cat="nails"><img src="images/nails-1.jpg" alt="Nail art" loading="lazy" /><figcaption>Chrome nail art</figcaption></figure>
+      <figure data-cat="makeup"><img src="images/makeup-2.jpg" alt="Party makeup" loading="lazy" /><figcaption>Party look</figcaption></figure>
+      <figure data-cat="nails"><img src="images/nails-2.jpg" alt="Gel extensions" loading="lazy" /><figcaption>Gel extensions</figcaption></figure>
+      <figure data-cat="makeup"><img src="images/makeup-3.jpg" alt="Editorial makeup" loading="lazy" /><figcaption>Editorial shoot</figcaption></figure>
+      <figure data-cat="nails"><img src="images/nails-3.jpg" alt="Bridal nails" loading="lazy" /><figcaption>Bridal nails</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section reviews" id="reviews">
+    <p class="eyebrow center">Kind words</p>
+    <h2 class="center">What clients say</h2>
+    <div class="cards">
+      <blockquote class="card quote">“My bridal makeup stayed perfect from the morning rituals to the last photo. I felt like myself — just glowing.”<cite>— Priya, bride</cite></blockquote>
+      <blockquote class="card quote">“The nail art was so detailed and lasted three weeks without a single chip. Already booked my next set!”<cite>— Aisha</cite></blockquote>
+      <blockquote class="card quote">“Professional, on time, and so calm on a stressful day. Everyone asked who did my makeup.”<cite>— Neha</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="section book" id="book">
+    <div>
+      <p class="eyebrow">Book now</p>
+      <h2>Let's create your look</h2>
+      <p>Send your details and I'll confirm availability on WhatsApp — usually within a few hours.</p>
+      <ul class="contact">
+        <li>📞 <a data-bind-href="tel" href="#"><span data-bind="phone">+91 00000 00000</span></a></li>
+        <li>✉️ <a data-bind-href="mailto" href="#"><span data-bind="email">hello@example.com</span></a></li>
+        <li>📸 <a data-bind-href="instagram" href="#" target="_blank" rel="noopener">@<span data-bind="instagram">yourhandle</span></a></li>
+        <li>📍 <span data-bind="city">Your City</span></li>
+      </ul>
+    </div>
+    <form class="form" id="booking-form" novalidate>
+      <label>Name<input name="name" required autocomplete="name" /></label>
+      <label>Phone<input name="phone" type="tel" required autocomplete="tel" /></label>
+      <div class="row">
+        <label>Service
+          <select name="service" required>
+            <option value="">Choose…</option>
+            <optgroup label="Makeup"><option>Bridal Makeup</option><option>Party &amp; Engagement</option><option>Editorial &amp; Shoots</option><option>Makeup Lessons</option></optgroup>
+            <optgroup label="Nails"><option>Gel Manicure</option><option>Nail Extensions</option><option>Nail Art</option><option>Bridal Nails</option></optgroup>
+          </select>
+        </label>
+        <label>Date<input name="date" type="date" required /></label>
+      </div>
+      <label>Message <small>(optional)</small><textarea name="message" rows="3" placeholder="Event, location, inspiration…"></textarea></label>
+      <button type="submit" class="btn">Send on WhatsApp</button>
+      <p class="form-note" id="form-note" role="status"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> <span data-bind="brand">Glow Studio</span> · Makeup &amp; Nail Artist</p>
+  </footer>
+
+  <a class="wa-float" data-bind-href="whatsapp" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
