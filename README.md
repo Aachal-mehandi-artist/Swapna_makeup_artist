@@ -38,7 +38,9 @@ After that, every `git push` to `main` updates the live site in about a minute.
 1. **Your details** — edit `config.js`: business name, your name, city, phone,
    WhatsApp number (digits only, with country code, e.g. `919876543210`), email,
    Instagram, experience numbers and prices. The whole page updates from that file.
-2. **Your photos** — put them in the `images/` folder with these names:
+2. **Your photos** — the site ships with free sample photos from Wikimedia Commons
+   (authors and licences in `credits.html`, linked from the footer). Replace them with
+   your own work before going live — overwrite the files in `images/`, keeping these names:
 
    | file | where it shows |
    |---|---|
@@ -46,8 +48,10 @@ After that, every `git push` to `main` updates the live site in about a minute.
    | `makeup-1.jpg`, `makeup-2.jpg`, `makeup-3.jpg` | Portfolio — Makeup |
    | `nails-1.jpg`, `nails-2.jpg`, `nails-3.jpg` | Portfolio — Nails |
 
-   Until a photo exists, a coloured placeholder shows its file name. To add more
-   photos, copy a `<figure>` line in `index.html` (section `gallery`).
+   Also update each photo's caption and `alt` text in `index.html` (section `gallery`).
+   Once all samples are replaced, delete `credits.html` and its footer link. If a photo is
+   missing, a coloured placeholder shows its file name. To add more photos, copy a
+   `<figure>` line.
 3. **Text** — services, reviews and the About paragraph are in `index.html`.
 4. **Colours** — change `--accent` (rose) and `--gold` at the top of `styles.css`.
 
